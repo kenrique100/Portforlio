@@ -19,7 +19,7 @@ function Projects({}: Props) {
             </h3>
 
             {/* SLIDER */}
-            <div className="relative w-full h-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-10">
+            <div className="relative w-full h-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-10 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
                 {projects.map((_, i) => (
                     <section
                         key={i}

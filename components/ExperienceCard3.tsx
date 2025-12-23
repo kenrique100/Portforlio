@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 type Props = {};
 
-export default function ExperienceCard({}: Props) {
+export default function ExperienceCard3({}: Props) {
     return (
         <article
             className="
@@ -33,31 +33,29 @@ export default function ExperienceCard({}: Props) {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
                 className="w-24 h-24 md:w-28 md:h-28 xl:w-36 xl:h-36 rounded-full object-cover"
-                src="/images/NASIA.png"
+                src="/images/alx.jpg"
                 alt="Company Logo"
             />
 
             {/* CONTENT */}
             <div className="mt-4 w-full px-2 md:px-6">
                 <h4 className="text-xl md:text-2xl xl:text-3xl font-light">
-                    Software Engineering / Full Stack Development
+                    ALX Software Engineering Program
                 </h4>
 
-                <p className="font-bold text-lg mt-1">NASIATECH</p>
+                <p className="font-bold text-lg mt-1">ALX AFRICA</p>
 
                 {/* TECH STACK */}
                 <div className="flex flex-wrap gap-2 my-3">
                     {[
-                        "Spring",
-                        "Java",
-                        "MySQL",
-                        "Selenium",
-                        "Git",
+                        "JavaScript",
+                        "Python",
                         "React",
-                        "Jenkins",
-                        "Docker",
-                        "Apache Kafka",
-                        "Postman",
+                        "PostgresSQL",
+                        "Git",
+                        "Vim",
+                        "GitHub",
+                        "GNU Emacs",
                     ].map((tech) => (
                         <img
                             key={tech}
@@ -69,17 +67,17 @@ export default function ExperienceCard({}: Props) {
                 </div>
 
                 <p className="text-sm text-gray-400 mb-3">
-                    Started: 2020 - Present
+                    2023 – 2024 (1 Year Training Period)
                 </p>
 
                 <ul className="list-disc ml-5 space-y-2 text-sm md:text-base">
-                    <li>Applied OOP and Agile software engineering principles.</li>
-                    <li>Developed Java applications using Spring Framework.</li>
-                    <li>Built RESTful web services and APIs.</li>
-                    <li>Designed user interfaces with React and modern CSS.</li>
-                    <li>Used Git and GitHub for version control.</li>
-                    <li>Worked with relational databases and SQL.</li>
-                    <li>Used DevOps tools including Maven, Jenkins, and Docker.</li>
+                    <li>Gained hands-on expertise in both front-end and back-end technologies.</li>
+                    <li>Learned programming languages, frameworks, databases, and APIs to build complete web applications.</li>
+                    <li>Developed strong programming foundations, algorithmic thinking, and best practices.</li>
+                    <li>Focused on writing clean, maintainable, and efficient code.</li>
+                    <li>Built teamwork skills through peer reviews and group projects.</li>
+                    <li>Applied learned concepts to real-world scenarios.</li>
+                    <li>Prepared for professional software engineering roles.</li>
                 </ul>
             </div>
         </article>

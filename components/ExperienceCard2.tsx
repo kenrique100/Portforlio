@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 type Props = {};
 
-export default function ExperienceCard({}: Props) {
+export default function ExperienceCard2({}: Props) {
     return (
         <article
             className="
@@ -26,38 +26,35 @@ export default function ExperienceCard({}: Props) {
         duration-200
       "
         >
-            {/* LOGO */}
             <motion.img
                 initial={{ y: -40, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
                 className="w-24 h-24 md:w-28 md:h-28 xl:w-36 xl:h-36 rounded-full object-cover"
-                src="/images/NASIA.png"
+                src="/images/climateWavers.jpeg"
                 alt="Company Logo"
             />
 
             {/* CONTENT */}
             <div className="mt-4 w-full px-2 md:px-6">
                 <h4 className="text-xl md:text-2xl xl:text-3xl font-light">
-                    Software Engineering / Full Stack Development
+                    Quality Assurance
                 </h4>
 
-                <p className="font-bold text-lg mt-1">NASIATECH</p>
+                <p className="font-bold text-lg mt-1">CLIMATE WAVERS</p>
 
                 {/* TECH STACK */}
                 <div className="flex flex-wrap gap-2 my-3">
                     {[
-                        "Spring",
-                        "Java",
-                        "MySQL",
-                        "Selenium",
-                        "Git",
-                        "React",
-                        "Jenkins",
-                        "Docker",
-                        "Apache Kafka",
+                        "Django",
+                        "Python",
                         "Postman",
+                        "Git",
+                        "GitHub",
+                        "Jupyter",
+                        "Slack",
+                        "MySQL"
                     ].map((tech) => (
                         <img
                             key={tech}
@@ -69,17 +66,16 @@ export default function ExperienceCard({}: Props) {
                 </div>
 
                 <p className="text-sm text-gray-400 mb-3">
-                    Started: 2020 - Present
+                    Started: 2024 - Ended: 2025
                 </p>
 
                 <ul className="list-disc ml-5 space-y-2 text-sm md:text-base">
-                    <li>Applied OOP and Agile software engineering principles.</li>
-                    <li>Developed Java applications using Spring Framework.</li>
-                    <li>Built RESTful web services and APIs.</li>
-                    <li>Designed user interfaces with React and modern CSS.</li>
-                    <li>Used Git and GitHub for version control.</li>
-                    <li>Worked with relational databases and SQL.</li>
-                    <li>Used DevOps tools including Maven, Jenkins, and Docker.</li>
+                    <li>Led end-to-end testing of Django-based web applications.</li>
+                    <li>Ensured stability across key features including disaster alerts, user reports, and AI-driven dashboards.</li>
+                    <li>Designed and executed test plans for functional, regression, and user acceptance testing.</li>
+                    <li>Documented and tracked critical issues using Postman and GitHub issues.</li>
+                    <li>Created and maintained QA documentation and release validation reports.</li>
+                    <li>Contributed to successful Talan Hackathon demo and public launch.</li>
                 </ul>
             </div>
         </article>
