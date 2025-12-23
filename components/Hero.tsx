@@ -19,8 +19,8 @@ export default function Hero({}: Props) {
     <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
         <BackgroundCircles />
         <img
-        className='relative rounded-full h-32 w-32 mx-auto object-cover animate-bounce'
-        src="https://avatars.githubusercontent.com/u/72971484?v=4" alt=""
+        className='relative rounded-full h-40 w-40 mx-auto object-cover animate-bounce'
+        src="/images/kenrique.jpg" alt=""
         />
 
         <div className="z-20">
