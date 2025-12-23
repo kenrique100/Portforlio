@@ -1,5 +1,4 @@
 import React from 'react'
-import background from '../components/images/NASIA.png'
 
 type Props = {}
 
