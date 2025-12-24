@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 type Props = {};
 
@@ -18,15 +19,22 @@ export default function About({}: Props) {
                 About
             </h3>
 
-            <motion.img
-                src="/images/kenrique.jpg"
-                alt="Kenrique Ngwa"
+            <motion.div
                 initial={{ x: -200, opacity: 0 }}
                 transition={{ duration: 1.2 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
-                className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[200px] xl:h-[300px]"
-            />
+                className="-mb-20 md:mb-0 flex-shrink-0"
+            >
+                <Image
+                    src="/images/kenrique.jpg"
+                    alt="Kenrique Ngwa"
+                    width={300}
+                    height={300}
+                    className="w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[200px] xl:h-[300px]"
+                    priority
+                />
+            </motion.div>
 
             <div className="space-y-10 px-0 md:px-10">
                 <h4 className="text-4xl font-semibold">

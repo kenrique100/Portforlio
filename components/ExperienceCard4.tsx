@@ -1,10 +1,26 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/dist/client/legacy/image";
+import Image from "next/image";
 
 type Props = {};
 
 export default function ExperienceCard4({}: Props) {
+    const techStack = [
+        { name: "React", width: 32, height: 32 },
+        { name: "Next.js", width: 32, height: 32 },
+        { name: "Spring", width: 32, height: 32 },
+        { name: "Selenium", width: 32, height: 32 },
+        { name: "Apache Kafka", width: 32, height: 32 },
+        { name: "Prometheus", width: 32, height: 32 },
+        { name: "Postman", width: 32, height: 32 },
+        { name: "GitHub", width: 32, height: 32 },
+        { name: "Tailwind CSS", width: 32, height: 32 },
+        { name: "PostgresSQL", width: 32, height: 32 },
+        { name: "MySQL", width: 32, height: 32 },
+        { name: "MongoDB", width: 32, height: 32 },
+        { name: "Java", width: 32, height: 32 },
+    ];
+
     return (
         <article
             className="
@@ -28,15 +44,20 @@ export default function ExperienceCard4({}: Props) {
       "
         >
             {/* LOGO */}
-            <motion.img
+            <motion.div
                 initial={{ y: -40, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="w-24 h-24 md:w-28 md:h-28 xl:w-36 xl:h-36 rounded-full object-cover"
-                src="/images/AKentech.png"
-                alt="Company Logo"
-            />
+            >
+                <Image
+                    src="/images/AKentech.png"
+                    alt="AKentech Logo"
+                    width={144}
+                    height={144}
+                    className="w-24 h-24 md:w-28 md:h-28 xl:w-36 xl:h-36 rounded-full object-cover"
+                />
+            </motion.div>
 
             {/* CONTENT */}
             <div className="mt-4 w-full px-2 md:px-6">
@@ -48,27 +69,16 @@ export default function ExperienceCard4({}: Props) {
 
                 {/* TECH STACK */}
                 <div className="flex flex-wrap gap-2 my-3">
-                    {[
-                        "React",
-                        "Next.js",
-                        "Spring",
-                        "Selenium",
-                        "Apache Kafka",
-                        "Prometheus",
-                        "Postman",
-                        "GitHub",
-                        "Tailwind CSS",
-                        "PostgresSQL",
-                        "MySQL",
-                        "MongoDB",
-                        "Java",
-                    ].map((tech) => (
-                        <Image
-                            key={tech}
-                            className="h-8 w-8 rounded-full"
-                            src={`/images/${tech}.png`}
-                            alt={tech}
-                        />
+                    {techStack.map((tech) => (
+                        <div key={tech.name} className="relative h-8 w-8">
+                            <Image
+                                className="rounded-full"
+                                src={`/images/${tech.name}.png`}
+                                alt={tech.name}
+                                width={tech.width}
+                                height={tech.height}
+                            />
+                        </div>
                     ))}
                 </div>
 

@@ -1,10 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/dist/client/legacy/image";
+import Image from "next/image";
 
 type Props = {};
 
 export default function ExperienceCard3({}: Props) {
+    const techStack = [
+        { name: "JavaScript", width: 32, height: 32 },
+        { name: "Python", width: 32, height: 32 },
+        { name: "React", width: 32, height: 32 },
+        { name: "PostgresSQL", width: 32, height: 32 },
+        { name: "Git", width: 32, height: 32 },
+        { name: "Vim", width: 32, height: 32 },
+        { name: "GitHub", width: 32, height: 32 },
+        { name: "GNU Emacs", width: 32, height: 32 },
+    ];
+
     return (
         <article
             className="
@@ -28,15 +39,20 @@ export default function ExperienceCard3({}: Props) {
       "
         >
             {/* LOGO */}
-            <motion.img
+            <motion.div
                 initial={{ y: -40, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="w-24 h-24 md:w-28 md:h-28 xl:w-36 xl:h-36 rounded-full object-cover"
-                src="/images/alx.jpg"
-                alt="Company Logo"
-            />
+            >
+                <Image
+                    src="/images/alx.jpg"
+                    alt="ALX Africa Logo"
+                    width={144}
+                    height={144}
+                    className="w-24 h-24 md:w-28 md:h-28 xl:w-36 xl:h-36 rounded-full object-cover"
+                />
+            </motion.div>
 
             {/* CONTENT */}
             <div className="mt-4 w-full px-2 md:px-6">
@@ -48,22 +64,16 @@ export default function ExperienceCard3({}: Props) {
 
                 {/* TECH STACK */}
                 <div className="flex flex-wrap gap-2 my-3">
-                    {[
-                        "JavaScript",
-                        "Python",
-                        "React",
-                        "PostgresSQL",
-                        "Git",
-                        "Vim",
-                        "GitHub",
-                        "GNU Emacs",
-                    ].map((tech) => (
-                        <Image
-                            key={tech}
-                            className="h-8 w-8 rounded-full"
-                            src={`/images/${tech}.png`}
-                            alt={tech}
-                        />
+                    {techStack.map((tech) => (
+                        <div key={tech.name} className="relative h-8 w-8">
+                            <Image
+                                className="rounded-full"
+                                src={`/images/${tech.name}.png`}
+                                alt={tech.name}
+                                width={tech.width}
+                                height={tech.height}
+                            />
+                        </div>
                     ))}
                 </div>
 

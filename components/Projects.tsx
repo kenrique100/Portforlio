@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 type Props = {};
 
@@ -26,7 +27,7 @@ function Projects({}: Props) {
                         className="w-screen h-screen flex-shrink-0 snap-center flex flex-col items-center pt-28 px-6 md:px-20"
                     >
                         {/* IMAGE */}
-                        <motion.img
+                        <motion.div
                             initial={{
                                 y: -300,
                                 opacity: 0
@@ -34,18 +35,23 @@ function Projects({}: Props) {
                             whileInView={{ y: 0, opacity: 1 }}
                             transition={{ duration: 1.2}}
                             viewport={{ once: true }}
-                            src="/images/kombe.png"
-                            alt="Project Screenshot"
-                            className="
-                                w-[520px]
-                                h-[620px]
-                                md:w-[980px]
-                                md:h-[650px]
-                                lg:w-[980px]
-                                lg:h-[650px]
-                                object-contain
-                            "
-                        />
+                        >
+                            <Image
+                                src="/images/kombe.png"
+                                alt="Project Screenshot"
+                                width={980}
+                                height={650}
+                                className="
+                                    w-[520px]
+                                    h-[620px]
+                                    md:w-[980px]
+                                    md:h-[650px]
+                                    lg:w-[980px]
+                                    lg:h-[650px]
+                                    object-contain
+                                "
+                            />
+                        </motion.div>
 
                         {/* TEXT */}
                         <div className="-mt-20 max-w-4xl text-center">
@@ -58,7 +64,7 @@ function Projects({}: Props) {
 
                             <p className="mt-3 text-sm md:text-base text-gray-300 leading-relaxed">
                                 Farm Management Web Application is a cloud-native platform that currently functions
-                                as a farmer’s digital wallet for managing income, expenses, and transactions. It
+                                as a farmer&apos;s digital wallet for managing income, expenses, and transactions. It
                                 supports pond management, water treatment, feeding schedules, and feed formulation
                                 with dynamic feed proportion calculations based on ingredient availability. Data can
                                 be entered via web forms, Excel uploads, or email ingestion. Built with Java Spring
