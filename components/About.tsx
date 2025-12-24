@@ -51,34 +51,7 @@ export default function About() {
                         background
                     </h4>
 
-                    <p className="text-sm md:text-[13px] leading-relaxed text-gray-300">
-                        Hello, I&apos;m Kenrique Ngwa, a dedicated Software Engineer with a
-                        Bachelor degree in Computer Software Engineering and over four years of
-                        experience building full-stack web applications. Over the years, I
-                        have collaborated with startups, tech companies, and SMEs to transform
-                        their ideas into scalable, robust digital solutions.
-                        <br />
-                        <br />
-                        My expertise includes React/Next.js, TypeScript, and Spring Boot (Java)
-                        for full-stack development, designing RESTful APIs, implementing
-                        real-time data pipelines with Kafka, and ensuring application
-                        resilience through testing and CI/CD automation. I also work with
-                        Docker, AWS, and agile methodologies to deliver high-quality software
-                        efficiently.
-                        <br />
-                        <br />
-                        Beyond client projects, I am passionate about solving real-world
-                        problems through impactful initiatives, such as a digital Farming
-                        Wallet for agricultural management and a simulated Wireless Sensor
-                        Network for environmental monitoring. I am continually expanding my
-                        skills, currently exploring workflow automation with ServiceNow
-                        (ITSM).
-                        <br />
-                        <br />
-                        I am seeking a challenging role where I can contribute to a
-                        collaborative team, tackle complex problems, and build clean,
-                        scalable, and maintainable software that drives business growth.
-                    </p>
+                    <p className="text-sm md:text-[13px] leading-relaxed text-gray-300"> Software Engineer with 4+ years of experience building scalable full-stack applications. I partner with startups, tech companies, and SMEs to translate ideas into robust digital solutions. <br /><br /> Proficient in modern stacks including React/Next.js, TypeScript, and Spring Boot, with hands-on experience in REST APIs, Kafka data pipelines, CI/CD automation, and cloud deployment (Docker, AWS). I leverage agile methodologies to deliver high-quality software efficiently. <br /><br /> Beyond client work, I build impactful projects like a digital Farming Wallet for agriculture and a simulated Wireless Sensor Network for environmental monitoring. Continuously expanding my skill set—currently exploring ServiceNow for workflow automation. <br /><br /> Seeking a collaborative role where I can solve complex problems, write clean and maintainable code, and contribute to meaningful business growth. </p>
                 </div>
             </div>
         </motion.div>
