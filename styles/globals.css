@@ -1,11 +1,92 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    /* Ensure proper text wrapping and prevent overflow */
+    * {
+        box-sizing: border-box;
+        max-width: 100%;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Better scroll snapping */
+    .snap-container {
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+    }
+}
+
 @layer components {
     .heroButton {
-        @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40 
+        @apply px-4 py-2 border border-[#242424] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40
+        md:px-6 md:py-2
     }
+
     .contactInput {
-        @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40 hover:border-[#F7AB0A]/40
+        @apply outline-none bg-slate-400/10 rounded-sm border-b px-4 py-3 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40 hover:border-[#F7AB0A]/40
+        md:px-6 md:py-4
+        w-full
     }
+}
+
+/* Custom scrollbar */
+.scrollbar::-webkit-scrollbar {
+    width: 10px;
+    height: 8px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    background: rgba(75, 85, 99, 0.2);
+    border-radius: 5px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(247, 171, 10, 0.8);
+    border-radius: 5px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(247, 171, 10, 1);
+}
+
+/* Improve mobile touch scrolling */
+@media (max-width: 768px) {
+    .snap-mandatory {
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-stop: always;
+    }
+
+    /* Hide scrollbar on mobile but keep functionality */
+    .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* Smooth transitions */
+.transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Card hover effects */
+.card-hover {
+    @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl;
 }

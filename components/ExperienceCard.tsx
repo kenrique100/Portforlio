@@ -14,7 +14,7 @@ export default function ExperienceCard({}: Props) {
         { name: "React", width: 32, height: 32 },
         { name: "Jenkins", width: 32, height: 32 },
         { name: "Docker", width: 32, height: 32 },
-        { name: "Apache Kafka", width: 32, height: 32 },
+        { name: "ApacheKafka", width: 32, height: 32 },
         { name: "Postman", width: 32, height: 32 },
     ];
 
@@ -22,22 +22,28 @@ export default function ExperienceCard({}: Props) {
         <article
             className="
         flex flex-col
-        rounded-lg
+        rounded-xl
         items-center
-        flex-shrink-0
-        w-[280px]
-        sm:w-[340px]
-        md:w-[420px]
-        lg:w-[520px]
-        xl:w-[700px]
-        snap-center
-        bg-[#292929]
+        w-full
+        max-w-4xl
+        mx-auto
+        bg-[#292929]/90
+        backdrop-blur-sm
         p-6
         md:p-8
-        opacity-40
+        lg:p-10
+        opacity-90
         hover:opacity-100
         transition-opacity
-        duration-200
+        duration-300
+        border border-gray-800/50
+        shadow-2xl
+        h-[85vh]
+        md:h-auto
+        overflow-y-auto
+        scrollbar-thin
+        scrollbar-track-gray-800
+        scrollbar-thumb-[#F7AB0A]/50
       "
         >
             {/* LOGO */}
@@ -46,51 +52,82 @@ export default function ExperienceCard({}: Props) {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
+                className="mb-6"
             >
-                <Image
-                    src="/images/NASIA.png"
-                    alt="NASIATECH Logo"
-                    width={144}
-                    height={144}
-                    className="w-24 h-24 md:w-28 md:h-28 xl:w-36 xl:h-36 rounded-full object-cover"
-                />
+                <div className="relative">
+                    <Image
+                        src="/images/NASIA.png"
+                        alt="NASIATECH Logo"
+                        width={160}
+                        height={160}
+                        className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-full object-cover border-4 border-[#F7AB0A]/20"
+                        priority
+                    />
+                </div>
             </motion.div>
 
             {/* CONTENT */}
-            <div className="mt-4 w-full px-2 md:px-6">
-                <h4 className="text-xl md:text-2xl xl:text-3xl font-light">
+            <div className="w-full px-0 md:px-2 space-y-4">
+                <h4 className="text-xl md:text-2xl lg:text-3xl font-semibold text-center text-white">
                     Software Engineering / Full Stack Development
                 </h4>
 
-                <p className="font-bold text-lg mt-1">NASIATECH</p>
+                <p className="font-bold text-lg md:text-xl mt-2 text-center text-[#F7AB0A]">NASIATECH</p>
 
                 {/* TECH STACK */}
-                <div className="flex flex-wrap gap-2 my-3">
+                <div className="flex flex-wrap gap-3 my-4 justify-center">
                     {techStack.map((tech) => (
-                        <div key={tech.name} className="relative h-8 w-8">
-                            <Image
-                                className="rounded-full"
-                                src={`/images/${tech.name}.png`}
-                                alt={tech.name}
-                                width={tech.width}
-                                height={tech.height}
-                            />
+                        <div
+                            key={tech.name}
+                            className="relative h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 p-1 bg-gray-800/50 rounded-full hover:scale-110 transition-transform duration-200"
+                        >
+                            <div className="relative h-full w-full">
+                                <Image
+                                    className="rounded-full object-cover"
+                                    src={`/images/${tech.name}.png`}
+                                    alt={tech.name}
+                                    width={tech.width}
+                                    height={tech.height}
+                                    style={{ width: '100%', height: '100%' }}
+                                />
+                            </div>
                         </div>
                     ))}
                 </div>
 
-                <p className="text-sm text-gray-400 mb-3">
-                    Started: 2020 - Present
+                <p className="text-sm md:text-base text-gray-400 mb-4 text-center">
+                    🗓️ Started: 2020 - Present
                 </p>
 
-                <ul className="list-disc ml-5 space-y-2 text-sm md:text-base">
-                    <li>Applied OOP and Agile software engineering principles.</li>
-                    <li>Developed Java applications using Spring Framework.</li>
-                    <li>Built RESTful web services and APIs.</li>
-                    <li>Designed user interfaces with React and modern CSS.</li>
-                    <li>Used Git and GitHub for version control.</li>
-                    <li>Worked with relational databases and SQL.</li>
-                    <li>Used DevOps tools including Maven, Jenkins, and Docker.</li>
+                <ul className="space-y-3 md:space-y-4 text-sm md:text-base lg:text-lg px-4 md:px-6">
+                    <li className="flex items-start">
+                        <span className="text-[#F7AB0A] mr-3">•</span>
+                        <span>Applied OOP and Agile software engineering principles.</span>
+                    </li>
+                    <li className="flex items-start">
+                        <span className="text-[#F7AB0A] mr-3">•</span>
+                        <span>Developed Java applications using Spring Framework.</span>
+                    </li>
+                    <li className="flex items-start">
+                        <span className="text-[#F7AB0A] mr-3">•</span>
+                        <span>Built RESTful web services and APIs.</span>
+                    </li>
+                    <li className="flex items-start">
+                        <span className="text-[#F7AB0A] mr-3">•</span>
+                        <span>Designed user interfaces with React and modern CSS.</span>
+                    </li>
+                    <li className="flex items-start">
+                        <span className="text-[#F7AB0A] mr-3">•</span>
+                        <span>Used Git and GitHub for version control.</span>
+                    </li>
+                    <li className="flex items-start">
+                        <span className="text-[#F7AB0A] mr-3">•</span>
+                        <span>Worked with relational databases and SQL.</span>
+                    </li>
+                    <li className="flex items-start">
+                        <span className="text-[#F7AB0A] mr-3">•</span>
+                        <span>Used DevOps tools including Maven, Jenkins, and Docker.</span>
+                    </li>
                 </ul>
             </div>
         </article>
