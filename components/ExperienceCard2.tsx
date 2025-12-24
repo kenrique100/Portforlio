@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/dist/client/legacy/image";
 
 type Props = {};
 
@@ -56,7 +57,7 @@ export default function ExperienceCard2({}: Props) {
                         "Slack",
                         "MySQL"
                     ].map((tech) => (
-                        <img
+                        <Image
                             key={tech}
                             className="h-8 w-8 rounded-full"
                             src={`/images/${tech}.png`}
