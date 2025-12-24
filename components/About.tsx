@@ -21,7 +21,7 @@ export default function About() {
             <div className="flex flex-col md:flex-row items-center gap-10 max-w-6xl">
 
                 {/* IMAGE */}
-                <motion.div
+                {/*<motion.div
                     initial={{ x: -80, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1 }}
@@ -36,7 +36,7 @@ export default function About() {
                         className="rounded-lg object-cover w-48 h-64 md:w-64 md:h-80"
                         priority
                     />
-                </motion.div>
+                </motion.div> */}
 
                 {/* TEXT */}
                 <div className="space-y-6 max-w-xl text-center md:text-left">
