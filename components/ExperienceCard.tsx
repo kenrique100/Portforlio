@@ -38,9 +38,10 @@ export default function ExperienceCard({}: Props) {
         duration-300
         border border-gray-800/50
         shadow-2xl
-        h-[85vh]
+        min-h-[80vh]  /* changed from h-[85vh] */
         md:h-auto
         overflow-y-auto
+        pb-10            /* added padding bottom */
         scrollbar-thin
         scrollbar-track-gray-800
         scrollbar-thumb-[#F7AB0A]/50
