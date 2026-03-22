@@ -17,7 +17,7 @@ type Certification = {
 const certifications: Certification[] = [
     {
         id: 1,
-        image: "/images/climateWavers.jpeg",
+        image: "/images/ClimateWavers.png",
         link: "https://drive.google.com/file/d/1MhIh9iVO8AqCKLm_-7yVK3fkYmCi7uT6/view?usp=sharing",
         title: "Certificate of Excellence – Climate Wavers",
         organization: "Climate Wavers",
