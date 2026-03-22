@@ -44,7 +44,7 @@ export default function Hero({}: Props) {
                 </h1>
 
                 <div className="pt-6 flex flex-wrap justify-center gap-2">
-                    {['about', 'experience', 'skills', 'projects'].map(section => (
+                    {['about', 'experience', 'certifications', 'skills', 'projects'].map(section => (
                         <button
                             key={section}
                             onClick={() => scrollToSection(section)}

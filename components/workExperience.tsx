@@ -26,10 +26,10 @@ export default function WorkExperience() {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1.2 }}
             viewport={{ once: true }}
-            className="h-full flex flex-col justify-start pt-24"
+            className="h-full flex flex-col justify-start pt-16 md:pt-20"
         >
             {/* TITLE */}
-            <h3 className="uppercase tracking-[20px] text-gray-500 text-2xl text-center mb-10">
+            <h3 className="uppercase tracking-[15px] md:tracking-[20px] text-gray-500 text-xl md:text-2xl text-center mb-6 md:mb-10 flex-shrink-0 px-4">
                 Experience
             </h3>
 

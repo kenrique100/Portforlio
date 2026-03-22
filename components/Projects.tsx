@@ -13,7 +13,7 @@ export default function Projects() {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
             viewport={{ once: true }}
-            className="relative h-screen flex flex-col justify-start pt-24 max-w-full mx-auto"
+            className="relative h-screen flex flex-col justify-start pt-16 md:pt-20 max-w-full mx-auto overflow-hidden"
         >
             {/* SECTION TITLE */}
             <h3 className="uppercase tracking-[15px] md:tracking-[20px] text-gray-500 text-xl md:text-2xl text-center mb-10 z-20">

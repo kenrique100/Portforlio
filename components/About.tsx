@@ -11,7 +11,7 @@ export default function About() {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1.2 }}
             viewport={{ once: true }}
-            className="h-full flex flex-col items-center justify-start pt-20 px-4 md:px-8"
+            className="h-full flex flex-col items-center justify-start pt-16 md:pt-20 px-4 md:px-8 overflow-y-auto scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-[#F7AB0A]/50"
         >
             {/* TITLE */}
             <h3 className="uppercase tracking-[14px] text-gray-500 text-lg mb-6">
@@ -51,7 +51,7 @@ export default function About() {
                         background
                     </h4>
 
-                    <p className="text-sm md: text-[13px] leading-relaxed text-gray-300"> Software Engineer with a bachelor degree in software engineering and now having 4+ years of experience building scalable full-stack applications. I partner with startups, tech companies, and SMEs to translate ideas into robust digital solutions.<br /> Proficient in modern stacks including React/Next.js, TypeScript, and Spring Boot, with hands-on experience in REST APIs, Kafka data pipelines, CI/CD automation, and cloud deployment (Docker, AWS). I leverage agile methodologies to deliver high-quality software efficiently. <br /> Beyond client work, I build impactful projects like a digital Farming Wallet for agriculture and a simulated Wireless Sensor Network for environmental monitoring. Continuously expanding my skill set currently exploring ServiceNow for workflow automation.<br /> Seeking a collaborative role where I can solve complex problems, write clean and maintainable code, and contribute to meaningful business growth. </p>
+                    <p className="text-sm md:text-[13px] leading-relaxed text-gray-300"> Software Engineer with a bachelor&apos;s degree in software engineering and now having 4+ years of experience building scalable full-stack applications. I partner with startups, tech companies, and SMEs to translate ideas into robust digital solutions.<br /> Proficient in modern stacks including React/Next.js, TypeScript, and Spring Boot, with hands-on experience in REST APIs, Kafka data pipelines, CI/CD automation, and cloud deployment (Docker, AWS). I leverage agile methodologies to deliver high-quality software efficiently. <br /> Beyond client work, I build impactful projects like a digital Farming Wallet for agriculture and a simulated Wireless Sensor Network for environmental monitoring. Continuously expanding my skill set currently exploring ServiceNow for workflow automation.<br /> Seeking a collaborative role where I can solve complex problems, write clean and maintainable code, and contribute to meaningful business growth. </p>
                 </div>
             </div>
         </motion.div>

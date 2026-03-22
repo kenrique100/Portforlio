@@ -19,7 +19,7 @@ export default function ContactMe() {
     };
 
     return (
-        <div className="h-screen flex flex-col justify-start pt-24 px-4 md:px-10 max-w-7xl mx-auto">
+        <div className="h-full flex flex-col justify-start pt-16 md:pt-20 px-4 md:px-10 max-w-7xl mx-auto overflow-y-auto scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-[#F7AB0A]/50">
             {/* SECTION TITLE */}
             <h3 className="uppercase tracking-[15px] md:tracking-[20px] text-gray-500 text-xl md:text-2xl text-center mb-10">
                 Contact
