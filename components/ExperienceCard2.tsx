@@ -104,7 +104,7 @@ export default function ExperienceCard2({}: Props) {
                     </li>
                     <li className="flex items-start">
                         <span className="text-[#F7AB0A] mr-3">•</span>
-                        <span>Ensured stability across key features including disaster alerts, user reports, and AI-driven dashboards.</span>
+                        <span>Ensured stability across key features including disaster alerts, user reports, and interactive dashboards.</span>
                     </li>
                     <li className="flex items-start">
                         <span className="text-[#F7AB0A] mr-3">•</span>
