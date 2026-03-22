@@ -50,7 +50,7 @@ export default function Skills() {
     ];
 
     return (
-        <div className="h-full flex flex-col items-center justify-start pt-24 px-6">
+        <div className="h-full flex flex-col items-center justify-start pt-16 md:pt-20 px-4 md:px-6 overflow-y-auto scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-[#F7AB0A]/50">
 
             {/* TITLE */}
             <h3 className="uppercase tracking-[20px] text-gray-500 text-2xl mb-4">
