@@ -345,7 +345,6 @@ function CertCard({
             onClick={!isActive ? onClick : undefined}
             className="
                 absolute top-0
-                w-[88vw] max-w-[380px]
                 flex flex-col
                 bg-[#1e1e1e]
                 rounded-3xl
@@ -355,9 +354,9 @@ function CertCard({
                 cursor-pointer
             "
             style={{
+                width: "min(90vw, 700px)",
                 left: "50%",
-                marginLeft: "calc(-44vw)",
-                maxWidth: "380px",
+                marginLeft: "calc(-1 * min(45vw, 350px))",
                 pointerEvents: isActive ? "auto" : "all",
             }}
         >
@@ -367,14 +366,14 @@ function CertCard({
             )}
 
             {/* CERTIFICATE IMAGE */}
-            <div className="relative w-full h-40 bg-gray-900 flex-shrink-0 overflow-hidden rounded-t-3xl">
+            <div className="relative w-full h-44 sm:h-52 md:h-64 lg:h-80 bg-gray-900 flex-shrink-0 overflow-hidden rounded-t-3xl flex items-center justify-center">
                 {!imgError ? (
                     /* eslint-disable-next-line @next/next/no-img-element */
                     <img
                         src={cert.image}
                         alt={cert.title}
                         onError={() => setImgError(true)}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                     />
                 ) : (
                     <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
@@ -384,8 +383,6 @@ function CertCard({
                         </span>
                     </div>
                 )}
-                {/* Gradient overlay at bottom of image */}
-                <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-[#1e1e1e] to-transparent" />
                 {/* Year badge */}
                 <div className="absolute top-3 right-3 bg-[#F7AB0A] text-black text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow-lg">
                     {cert.date}
@@ -393,7 +390,7 @@ function CertCard({
             </div>
 
             {/* SCROLLABLE CONTENT */}
-            <div className="flex flex-col flex-1 overflow-y-auto scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-[#F7AB0A]/40 px-5 pt-3 pb-2 min-h-0 max-h-[46vh]">
+            <div className="flex flex-col flex-1 overflow-y-auto scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-[#F7AB0A]/40 px-5 pt-3 pb-2 min-h-0 max-h-[50vh]">
                 {/* Org */}
                 <span className="text-[#F7AB0A] text-[10px] font-bold uppercase tracking-widest mb-1">
                     {cert.organization}
