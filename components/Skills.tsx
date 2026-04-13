@@ -28,7 +28,6 @@ function Skill({ directionLeft, skillName, proficiency, iconSrc }: SkillProps) {
                 className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full border border-gray-500 object-cover filter group-hover:grayscale transition-all duration-300"
             />
 
-            {/* Overlay - Shows on hover (desktop) or tap (mobile) */}
             <div
                 className={`
                     absolute inset-0 bg-white/90 backdrop-blur-sm rounded-full 
