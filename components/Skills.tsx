@@ -72,7 +72,7 @@ export default function Skills() {
             className="min-h-screen w-full flex flex-col items-center justify-start px-4 md:px-6 py-16 md:py-20"
         >
             {/* TITLE SECTION */}
-            <div className="text-center mb-14 md:mb-40">
+            <div className="text-center mt-6 md:mt-0 mb-14 md:mb-40">
                 <h3 className="uppercase tracking-[15px] md:tracking-[20px] text-gray-500 text-xl md:text-2xl">
                     Skills
                 </h3>

@@ -3,7 +3,7 @@ import Head from "next/head";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import WorkExperience from "@/components/workExperience";
+import WorkExperience from "@/components/WorkExperience";
 import Certifications from "@/components/Certifications";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
@@ -16,6 +16,7 @@ const Home: NextPage = () => {
 
             <Head>
                 <title>Kenrique Portfolio</title>
+                <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <Header />
