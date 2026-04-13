@@ -55,22 +55,23 @@ type Props = {}
 
 function Skills({}: Props) {
     const skillsData = [
-        { name: "React", proficiency: "85%", icon: "/images/React.png" },
-        { name: "JavaScript", proficiency: "90%", icon: "/images/JavaScript.png" },
+        { name: "React", proficiency: "65%", icon: "/images/React.png" },
+        { name: "JavaScript", proficiency: "80%", icon: "/images/JavaScript.png" },
         { name: "OpenAPI", proficiency: "80%", icon: "/images/OpenAPI.png" },
-        { name: "Java", proficiency: "85%", icon: "/images/Java.png" },
-        { name: "Spring Boot", proficiency: "80%", icon: "/images/Spring.png" },
-        { name: "Next.js", proficiency: "75%", icon: "/images/Next.js.png" },
-        { name: "TailwindCSS", proficiency: "75%", icon: "/images/TailwindCSS.png" },
-        { name: "MongoDB", proficiency: "70%", icon: "/images/MongoDB.png" },
+        { name: "Java", proficiency: "75%", icon: "/images/Java.png" },
+        { name: "Spring Boot", proficiency: "75%", icon: "/images/Spring.png" },
+        { name: "Next.js", proficiency: "70%", icon: "/images/Next.js.png" },
+        { name: "TailwindCSS", proficiency: "70%", icon: "/images/TailwindCSS.png" },
+        { name: "MongoDB", proficiency: "80%", icon: "/images/MongoDB.png" },
         { name: "Docker", proficiency: "70%", icon: "/images/Docker.png" },
         { name: "Git", proficiency: "90%", icon: "/images/Git.png" },
-        { name: "AWS", proficiency: "65%", icon: "/images/AWS.png" },
-        { name: "MySQL", proficiency: "80%", icon: "/images/MySQL.png" },
+        { name: "AWS", proficiency: "50%", icon: "/images/AWS.png" },
+        { name: "MySQL", proficiency: "85%", icon: "/images/MySQL.png" },
         { name: "PostgresSQL", proficiency: "85%", icon: "/images/PostgresSQL.png" },
         { name: "Jenkins", proficiency: "80%", icon: "/images/Jenkins.png" },
-        { name: "Selenium", proficiency: "75%", icon: "/images/Selenium.png" },
+        { name: "Selenium", proficiency: "85%", icon: "/images/Selenium.png" },
         { name: "Kafka", proficiency: "70%", icon: "/images/ApacheKafka.png" },
+        { name: "Microsoft Office", proficiency: "90%", icon: "/images/office.png" },
     ];
 
     return (

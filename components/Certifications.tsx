@@ -134,6 +134,8 @@ const certifications: Certification[] = [
         ],
         techStack: [
             { name: "NodeJS", image: "/images/NodeJS.png" },
+            { name: "MongoDB", image: "/images/MongoDB.png" },
+            { name: "OpenAPI", image: "/images/OpenAPI.png" },
         ],
     },
     {
@@ -152,6 +154,8 @@ const certifications: Certification[] = [
         ],
         techStack: [
             { name: "NodeJS", image: "/images/NodeJS.png" },
+            { name: "MongoDB", image: "/images/MongoDB.png" },
+            { name: "OpenAPI", image: "/images/OpenAPI.png" },
         ],
     },
     {
@@ -188,6 +192,8 @@ const certifications: Certification[] = [
         ],
         techStack: [
             { name: "JavaScript", image: "/images/JavaScript.png" },
+            { name: "MongoDB", image: "/images/MongoDB.png" },
+            { name: "OpenAPI", image: "/images/OpenAPI.png" },
         ],
     },
     {
@@ -208,6 +214,7 @@ const certifications: Certification[] = [
             { name: "React", image: "/images/React.png" },
             { name: "NodeJS", image: "/images/NodeJS.png" },
             { name: "MongoDB", image: "/images/MongoDB.png" },
+            { name: "Python", image: "/images/Python.png" },
         ],
     },
     {
@@ -225,8 +232,8 @@ const certifications: Certification[] = [
             "Integrated third-party APIs within Node.js applications",
         ],
         techStack: [
-            { name: "NodeJS", image: "/images/NodeJS.png" },
             { name: "OpenAPI", image: "/images/OpenAPI.png" },
+            { name: "Java", image: "/images/Java.png" },
         ],
     },
     {
@@ -281,25 +288,33 @@ const certifications: Certification[] = [
             "Passed technical assessments covering multiple engineering domains",
         ],
         techStack: [
-            { name: "Git", image: "/images/Git.png" },
-            { name: "Docker", image: "/images/Docker.png" },
+            { name: "Java", image: "/images/Java.png" },
         ],
     },
 ];
 
+// ─── Responsive hook ──────────────────────────────────────────────────────────
+
+function useIsMobile() {
+    const [isMobile, setIsMobile] = useState(false);
+    useEffect(() => {
+        const check = () => setIsMobile(window.innerWidth < 768);
+        check();
+        window.addEventListener("resize", check);
+        return () => window.removeEventListener("resize", check);
+    }, []);
+    return isMobile;
+}
+
 // ─── Stacked Carousel ────────────────────────────────────────────────────────
 
-function getCardVariant(offset: number) {
+function getCardVariant(offset: number, isMobile: boolean) {
     const abs = Math.abs(offset);
     if (abs > 2) {
-        return {
-            x: offset > 0 ? "160%" : "-160%",
-            scale: 0.6,
-            opacity: 0,
-            zIndex: 0,
-        };
+        return { x: offset > 0 ? "160%" : "-160%", scale: 0.6, opacity: 0, zIndex: 0 };
     }
-    const x = offset * 68;           // % offset per step
+    const xStep = isMobile ? 90 : 68;
+    const x = offset * xStep;
     const scale = 1 - abs * 0.13;
     const opacity = 1 - abs * 0.42;
     const zIndex = 10 - abs * 3;
@@ -311,7 +326,7 @@ function TechBadge({ tech }: { tech: TechItem }) {
     if (err) return null;
     return (
         <div
-            className="relative h-8 w-8 p-1 bg-gray-800/60 rounded-full hover:scale-110 transition-transform duration-200 flex-shrink-0"
+            className="relative h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 p-1 bg-gray-800/50 rounded-full hover:scale-110 transition-transform duration-200 flex-shrink-0"
             title={tech.name}
         >
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -326,17 +341,23 @@ function TechBadge({ tech }: { tech: TechItem }) {
 }
 
 function CertCard({
-    cert,
-    offset,
-    onClick,
-}: {
+                      cert,
+                      offset,
+                      onClick,
+                      isMobile,
+                  }: {
     cert: Certification;
     offset: number;
     onClick: () => void;
+    isMobile: boolean;
 }) {
     const [imgError, setImgError] = useState(false);
-    const variant = getCardVariant(offset);
+    const variant = getCardVariant(offset, isMobile);
     const isActive = offset === 0;
+
+    const cardWidth = isMobile ? "88vw" : "min(50vw, 496px)";
+    const cardMargin = isMobile ? "-44vw" : "calc(-1 * min(25vw, 248px))";
+    const cardHeight = isMobile ? "min(82vh, 660px)" : "min(90vh, 750px)";
 
     return (
         <motion.article
@@ -344,84 +365,78 @@ function CertCard({
             transition={{ type: "spring", stiffness: 280, damping: 28 }}
             onClick={!isActive ? onClick : undefined}
             className="
-                absolute top-0
-                w-[88vw] max-w-[380px]
+                absolute top-10
                 flex flex-col
-                bg-[#1e1e1e]
-                rounded-3xl
-                border border-gray-700/40
+                bg-[#292929]/90
+                backdrop-blur-sm
+                rounded-xl
+                border border-gray-800/50
                 shadow-2xl
                 overflow-hidden
                 cursor-pointer
+                opacity-90 hover:opacity-100
+                transition-opacity duration-300
             "
             style={{
+                width: cardWidth,
+                height: cardHeight,
                 left: "50%",
-                marginLeft: "calc(-44vw)",
-                maxWidth: "380px",
+                marginLeft: cardMargin,
                 pointerEvents: isActive ? "auto" : "all",
             }}
         >
-            {/* gradient ring on active card */}
             {isActive && (
-                <div className="absolute inset-0 rounded-3xl ring-2 ring-[#F7AB0A]/40 pointer-events-none z-10" />
+                <div className="absolute inset-0 rounded-xl ring-2 ring-[#F7AB0A]/40 pointer-events-none z-10" />
             )}
 
-            {/* CERTIFICATE IMAGE */}
-            <div className="relative w-full h-40 bg-gray-900 flex-shrink-0 overflow-hidden rounded-t-3xl">
+            {/* CERTIFICATE IMAGE - Fixed height with proper object containment */}
+            <div className="relative w-full h-48 sm:h-52 md:h-64 lg:h-72 bg-gray-900 flex-shrink-0 overflow-hidden rounded-t-xl">
                 {!imgError ? (
-                    /* eslint-disable-next-line @next/next/no-img-element */
+                    // eslint-disable-next-line @next/next/no-img-element
                     <img
                         src={cert.image}
                         alt={cert.title}
                         onError={() => setImgError(true)}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain p-2"
                     />
                 ) : (
                     <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
-                        <span className="text-5xl mb-2">🏆</span>
+                        <span className="text-5xl mb-2">📜</span>
                         <span className="text-gray-400 text-sm text-center px-4">
                             {cert.organization}
                         </span>
                     </div>
                 )}
-                {/* Gradient overlay at bottom of image */}
-                <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-[#1e1e1e] to-transparent" />
-                {/* Year badge */}
-                <div className="absolute top-3 right-3 bg-[#F7AB0A] text-black text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow-lg">
+                <div className="absolute top-3 right-3 bg-[#F7AB0A] text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg z-20">
                     {cert.date}
                 </div>
             </div>
 
             {/* SCROLLABLE CONTENT */}
-            <div className="flex flex-col flex-1 overflow-y-auto scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-[#F7AB0A]/40 px-5 pt-3 pb-2 min-h-0 max-h-[46vh]">
-                {/* Org */}
+            <div className="flex flex-col flex-1 overflow-y-auto scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-[#F7AB0A]/50 px-4 md:px-8 lg:px-10 pt-3 pb-2 min-h-0">
                 <span className="text-[#F7AB0A] text-[10px] font-bold uppercase tracking-widest mb-1">
                     {cert.organization}
                 </span>
 
-                {/* Title */}
-                <h4 className="text-sm font-bold text-white leading-snug mb-1">
+                <h4 className="text-sm md:text-base lg:text-lg font-semibold text-white leading-snug mb-1">
                     {cert.title}
                 </h4>
 
-                {/* Focus area */}
-                <p className="text-[11px] text-[#F7AB0A]/60 mb-3">
-                    📌 {cert.focusArea}
+                <p className="text-xs md:text-sm text-[#F7AB0A]/60 mb-2">
+                    {cert.focusArea}
                 </p>
 
-                {/* Tech stack */}
                 {cert.techStack.length > 0 && (
-                    <div className="flex flex-wrap gap-2 mb-3">
+                    <div className="flex flex-wrap gap-1.5 md:gap-3 mb-2">
                         {cert.techStack.map((t) => (
                             <TechBadge key={t.name} tech={t} />
                         ))}
                     </div>
                 )}
 
-                {/* Achievements – point form */}
                 <ul className="space-y-1.5 mb-2">
                     {cert.achievements.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2 text-[11px] text-gray-300 leading-relaxed">
+                        <li key={i} className="flex items-start gap-2 text-xs md:text-sm text-gray-300 leading-relaxed">
                             <span className="text-[#F7AB0A] mt-0.5 flex-shrink-0">•</span>
                             <span>{item}</span>
                         </li>
@@ -430,7 +445,7 @@ function CertCard({
             </div>
 
             {/* VIEW BUTTON */}
-            <div className="px-5 py-3 border-t border-gray-700/30 flex-shrink-0 bg-[#1e1e1e]">
+            <div className="px-4 md:px-8 lg:px-10 py-3 border-t border-gray-700/30 flex-shrink-0 bg-[#292929]/90">
                 <a
                     href={cert.link}
                     target="_blank"
@@ -440,13 +455,12 @@ function CertCard({
                         block w-full text-center
                         bg-[#F7AB0A] hover:bg-[#F7AB0A]/80
                         text-black font-bold
-                        py-2 px-4
-                        rounded-xl
+                        py-2 px-4 rounded-xl
                         transition-colors duration-200
-                        text-xs tracking-wide
+                        text-xs md:text-sm tracking-wide
                     "
                 >
-                    View Certificate ↗
+                    View Certificate 👁️
                 </a>
             </div>
         </motion.article>
@@ -458,18 +472,12 @@ function CertCard({
 export default function Certifications() {
     const [active, setActive] = useState(0);
     const touchStartX = useRef<number | null>(null);
+    const isMobile = useIsMobile();
     const total = certifications.length;
 
-    const prev = useCallback(
-        () => setActive((i) => Math.max(0, i - 1)),
-        []
-    );
-    const next = useCallback(
-        () => setActive((i) => Math.min(total - 1, i + 1)),
-        [total]
-    );
+    const prev = useCallback(() => setActive((i) => Math.max(0, i - 1)), []);
+    const next = useCallback(() => setActive((i) => Math.min(total - 1, i + 1)), [total]);
 
-    // Keyboard navigation
     useEffect(() => {
         const handler = (e: KeyboardEvent) => {
             if (e.key === "ArrowLeft") prev();
@@ -497,14 +505,11 @@ export default function Certifications() {
             viewport={{ once: true }}
             className="h-full flex flex-col justify-start pt-16 md:pt-20"
         >
-            {/* TITLE */}
-            <div className="text-center mb-6 flex-shrink-0 px-4">
+            {/* TITLE - Certificate count removed */}
+            <div className="text-center mb-4 md:mb-6 flex-shrink-0 px-4">
                 <h3 className="uppercase tracking-[15px] md:tracking-[20px] text-gray-500 text-xl md:text-2xl">
                     Certifications
                 </h3>
-                <p className="text-[#F7AB0A] text-sm mt-1 font-semibold">
-                    {active + 1} / {total}
-                </p>
             </div>
 
             {/* CAROUSEL STAGE */}
@@ -523,6 +528,7 @@ export default function Certifications() {
                                 cert={cert}
                                 offset={offset}
                                 onClick={() => setActive(i)}
+                                isMobile={isMobile}
                             />
                         );
                     })}
@@ -530,7 +536,7 @@ export default function Certifications() {
             </div>
 
             {/* DOT INDICATORS */}
-            <div className="flex justify-center gap-1.5 py-4 flex-shrink-0">
+            <div className="flex justify-center gap-1.5 py-3 md:py-4 flex-shrink-0">
                 {certifications.map((_, i) => (
                     <button
                         key={i}
@@ -539,15 +545,15 @@ export default function Certifications() {
                         className={`
                             rounded-full transition-all duration-300
                             ${i === active
-                                ? "w-5 h-2 bg-[#F7AB0A]"
-                                : "w-2 h-2 bg-gray-600 hover:bg-gray-400"}
+                            ? "w-5 h-2 bg-[#F7AB0A]"
+                            : "w-2 h-2 bg-gray-600 hover:bg-gray-400"}
                         `}
                     />
                 ))}
             </div>
 
             {/* SWIPE HINT */}
-            <p className="text-center text-gray-600 text-[11px] pb-2 flex-shrink-0 animate-pulse">
+            <p className="text-center text-gray-600 text-[11px] pb-8 flex-shrink-0 animate-pulse">
                 ← Swipe or tap side cards to navigate →
             </p>
         </motion.div>
