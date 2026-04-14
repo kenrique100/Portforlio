@@ -35,6 +35,8 @@ const certifications: Certification[] = [
             "Conducted performance evaluation using Django testing tools",
             "Validated API workflows and endpoints with Postman",
             "Maintained high performance standards across system modules",
+            "Acted as a gatekeeper for production releases, reducing post-deployment bugs",
+            "Collaborated with developers to reproduce edge cases, improving team efficiency",
         ],
         techStack: [
             { name: "Django", image: "/images/Django.png" },
@@ -56,6 +58,8 @@ const certifications: Certification[] = [
             "Applied Flexbox and CSS Grid for adaptive layouts",
             "Designed accessible and semantic HTML structures",
             "Implemented media queries for cross-device compatibility",
+            "Learned accessibility-first design (ARIA roles, semantic HTML)",
+            "Built a portfolio project that passed Google's mobile-friendly test",
         ],
         techStack: [
             { name: "JavaScript", image: "/images/JavaScript.png" },
@@ -74,6 +78,8 @@ const certifications: Certification[] = [
             "Applied ES6+ JavaScript features across projects",
             "Implemented core data structures (stacks, queues, trees)",
             "Analyzed time and space complexity of algorithms",
+            "Solved recursion, sorting, and search algorithm challenges",
+            "Applied functional programming (map, filter, reduce) to real data sets",
         ],
         techStack: [
             { name: "JavaScript", image: "/images/JavaScript.png" },
@@ -92,6 +98,8 @@ const certifications: Certification[] = [
             "Managed application state with Redux",
             "Styled responsive UIs using Bootstrap and Sass",
             "Built reusable React component libraries",
+            "Built a markdown previewer and a drum machine using component lifecycle",
+            "Styled consistently with Sass variables and Bootstrap utilities",
         ],
         techStack: [
             { name: "React", image: "/images/React.png" },
@@ -111,6 +119,8 @@ const certifications: Certification[] = [
             "Designed RESTful endpoints with Express.js",
             "Integrated MongoDB for data persistence",
             "Handled authentication and middleware patterns",
+            "Created a timestamp microservice and a URL shortener",
+            "Used middleware for logging, authentication, and error handling",
         ],
         techStack: [
             { name: "NodeJS", image: "/images/NodeJS.png" },
@@ -131,6 +141,8 @@ const certifications: Certification[] = [
             "Written unit and integration tests using Chai and Mocha",
             "Debugged and resolved application defects systematically",
             "Validated functional requirements through structured test cases",
+            "Wrote Chai + Mocha tests for async and sync functions",
+            "Simulated user workflows with functional testing",
         ],
         techStack: [
             { name: "NodeJS", image: "/images/NodeJS.png" },
@@ -151,6 +163,8 @@ const certifications: Certification[] = [
             "Applied Helmet.js to harden HTTP headers",
             "Implemented password hashing with BCrypt",
             "Conducted penetration testing and security audits",
+            "Implemented rate limiting and input sanitization",
+            "Used Helmet.js and BCrypt in a live anonymous-message board project",
         ],
         techStack: [
             { name: "NodeJS", image: "/images/NodeJS.png" },
@@ -171,6 +185,8 @@ const certifications: Certification[] = [
             "Manipulated datasets using Pandas and NumPy",
             "Produced summary statistics and exploratory reports",
             "Identified trends and patterns from structured data",
+            "Performed demographic and medical data analysis (mean, variance, correlation)",
+            "Automated data-cleaning scripts for repeatable reports",
         ],
         techStack: [
             { name: "Python", image: "/images/Python.png" },
@@ -189,6 +205,8 @@ const certifications: Certification[] = [
             "Created bar, scatter, and heat-map charts using D3.js",
             "Bound live data to SVG elements for dynamic updates",
             "Applied visual storytelling principles to present insights",
+            "Built a bar chart, scatter plot, and heatmap using D3.js",
+            "Bound live JSON data to SVG elements for real-time updates",
         ],
         techStack: [
             { name: "JavaScript", image: "/images/JavaScript.png" },
@@ -209,6 +227,8 @@ const certifications: Certification[] = [
             "Integrated React frontends with Node.js/Express backends",
             "Managed data storage and retrieval with MongoDB",
             "Deployed full-stack applications end-to-end",
+            "Integrated React frontend with Node/Express backend and MongoDB",
+            "Managed environment variables, CORS, and deployment configs",
         ],
         techStack: [
             { name: "React", image: "/images/React.png" },
@@ -230,6 +250,8 @@ const certifications: Certification[] = [
             "Handled HTTP methods, status codes, and request/response cycles",
             "Parsed and manipulated JSON payloads",
             "Integrated third-party APIs within Node.js applications",
+            "Handled pagination, filtering, and error responses",
+            "Consumed third-party APIs inside Node.js with async/await",
         ],
         techStack: [
             { name: "OpenAPI", image: "/images/OpenAPI.png" },
@@ -249,6 +271,8 @@ const certifications: Certification[] = [
             "Applied classes, inheritance, and interfaces effectively",
             "Worked with Java data types, control flow, and exceptions",
             "Solved foundational coding challenges with clean Java code",
+            "Mastered static methods, access modifiers, and constructors",
+            "Solved problems involving inheritance and polymorphism",
         ],
         techStack: [
             { name: "Java", image: "/images/Java.png" },
@@ -267,6 +291,8 @@ const certifications: Certification[] = [
             "Implemented data structures including graphs, heaps, and tries",
             "Analyzed problem constraints to select optimal approaches",
             "Applied dynamic programming and greedy strategies",
+            "Implemented BFS/DFS, heaps, and recursion with memoization",
+            "Reduced time complexity from O(n²) to O(n log n) in sorting challenges",
         ],
         techStack: [
             { name: "JavaScript", image: "/images/JavaScript.png" },
@@ -286,6 +312,8 @@ const certifications: Certification[] = [
             "Demonstrated algorithm design and system debugging competency",
             "Applied coding best practices and clean code principles",
             "Passed technical assessments covering multiple engineering domains",
+            "Passed a multi-domain assessment (algorithms, debugging, logic)",
+            "Demonstrated production-ready coding under timed conditions",
         ],
         techStack: [
             { name: "Java", image: "/images/Java.png" },
