@@ -128,6 +128,10 @@ const experiences: Experience[] = [
             { name: "Docker", image: "/images/Docker.png" },
             { name: "ApacheKafka", image: "/images/ApacheKafka.png" },
             { name: "Postman", image: "/images/Postman.png" },
+            { name: "Grafana", image: "/images/Grafana.png" },
+            { name: "Prometheus", image: "/images/Prometheus.png" },
+            { name: "Kubernetes", image: "/images/kubernetes.png" },
+            { name: "Elastic Search", image: "/images/elasticsearch.png" },
         ],
     },
 ];

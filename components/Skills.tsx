@@ -60,7 +60,15 @@ export default function Skills() {
         { name: "Jenkins", proficiency: "80%", icon: "/images/Jenkins.png" },
         { name: "Selenium", proficiency: "85%", icon: "/images/Selenium.png" },
         { name: "Kafka", proficiency: "70%", icon: "/images/ApacheKafka.png" },
-        { name: "Microsoft Office", proficiency: "90%", icon: "/images/office.png" },
+        { name: "Kibana", proficiency: "50%", icon: "/images/kibana.png" },
+        { name: "Elastic Search", proficiency: "50%", icon: "/images/elasticsearch.png" },
+        { name: "Terraform", proficiency: "50%", icon: "/images/terraform.png" },
+        { name: "Kubernetes", proficiency: "60%", icon: "/images/kubernetes.png" },
+        { name: "Prometheus", proficiency: "50%", icon: "/images/Prometheus.png" },
+        { name: "Grafana", proficiency: "50%", icon: "/images/Grafana.png" },
+        { name: "Redis", proficiency: "90%", icon: "/images/redis.png" },
+
+
     ];
 
     return (
