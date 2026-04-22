@@ -179,7 +179,7 @@ const certifications: Certification[] = [
         title: "Data Analysis with Python",
         organization: "freeCodeCamp",
         focusArea: "Data Science",
-        date: "2023",
+        date: "2024",
         achievements: [
             "Performed data cleaning, analysis, and insight generation",
             "Manipulated datasets using Pandas and NumPy",
