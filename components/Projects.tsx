@@ -27,7 +27,7 @@ const projects: Project[] = [
         tech: ["Java Spring Boot", "Apache Kafka", "Kubernetes", "AWS", "React", "Grafana", "Prometheus"],
         siteUrl: "https://manage.kombe-farms.com",
         githubUrl: "https://github.com",
-        images: ["/images/1.png", "/images/2.png", "/images/3.png", "/images/4.png", "/images/5.png", "/images/6.png", "/images/7.png", "/images/8.png"],
+        images: ["/images/kombe.png", "/images/1.png", "/images/2.png", "/images/3.png", "/images/4.png", "/images/5.png", "/images/6.png", "/images/7.png", "/images/8.png"],
     },
     {
         title: "CNERSH Government Web Platform",
