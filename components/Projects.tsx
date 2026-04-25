@@ -39,7 +39,7 @@ const projects: Project[] = [
             "Architected for high availability and horizontal scalability to support concurrent institutional and government-facing workloads.",
         ],
         tech: ["Java Spring Boot", "React", "REST API", "PostgreSQL", "AWS"],
-        images: ["/images/kombe.png", "/images/kombe.png"],
+        images: ["/images/cnersh.png", "/images/c1.png", "/images/c2.png", "/images/c3.png", "/images/c4.png", "/images/c5.png", "/images/c6.png", "/images/c7.png"],
     },
     {
         title: "Microservice E-Commerce Platform",
