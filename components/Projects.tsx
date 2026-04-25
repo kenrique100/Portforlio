@@ -26,7 +26,7 @@ const projects: Project[] = [
         ],
         tech: ["Java Spring Boot", "Apache Kafka", "Kubernetes", "AWS", "React", "Grafana", "Prometheus"],
         siteUrl: "https://manage.kombe-farms.com",
-        githubUrl: "https://github.com",
+        githubUrl: "https://github.com/kenrique100/Farm-management-web-application",
         images: ["/images/kombe.png", "/images/1.png", "/images/2.png", "/images/3.png", "/images/4.png", "/images/5.png", "/images/6.png", "/images/7.png", "/images/8.png"],
     },
     {
@@ -51,7 +51,7 @@ const projects: Project[] = [
             "Containerized all services with Docker and configured CI/CD pipelines for automated testing and zero-downtime deployments.",
         ],
         tech: ["Java Spring Boot", "Microservices", "API Gateway", "Docker", "Kafka", "Grafana", "Prometheus", "Redis", "Kubernetes"],
-        githubUrl: "https://github.com",
+        githubUrl: "https://github.com/kenrique100/E-Commence-Microservice-web-application-api-gateway",
         images: ["/images/kombe.png", "/images/kombe.png"],
     },
     {
@@ -65,7 +65,7 @@ const projects: Project[] = [
             "Also has the ability to Print and export already generated fish feed formula and a .pdf and .xlsx files respectively"
         ],
         tech: ["Java Spring Boot", "React", "REST API", "Scientific Algorithms"],
-        githubUrl: "https://github.com",
+        githubUrl: "https://github.com/kenrique100/Feed-Formulation-updated",
         images: ["/images/fish_feed.png", "/images/f1.png", "/images/f2.png", "/images/f3.png", "/images/f4.png", "/images/f5.png", "/images/f6.png", "/images/f7.png", "/images/f8.png"],
     },
     {
@@ -78,8 +78,8 @@ const projects: Project[] = [
             "Decoupled frontend and backend repositories for independent deployability and team scalability.",
         ],
         tech: ["Java Spring Boot", "IoT", "Real-Time Streaming", "React", "PostgreSQL"],
-        githubUrl: "https://github.com",
-        images: ["/images/kombe.png", "/images/kombe.png"],
+        githubUrl: "https://github.com/kenrique100/WSN-SIMULATION-BACKEND",
+        images: ["/images/wsn.png", "/images/w1.png", "/images/w2.png", "/images/w3.png", "/images/w4.png", "/images/w5.png"],
     },
     {
         title: "Kombe Farms EMS",
