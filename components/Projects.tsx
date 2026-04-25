@@ -55,17 +55,18 @@ const projects: Project[] = [
         images: ["/images/kombe.png", "/images/kombe.png"],
     },
     {
-        title: "Fish Feed Formulation Engine",
+        title: "Pearson Method Fish Feed Formulation Engine",
         subtitle: "AgriTech · Scientific Computation",
         bullets: [
             "Built a precision feed calculation engine using the Pearson Square Method, computing exact ingredient quantities (kg) across 14 inputs including protein sources, minerals, and supplements.",
             "Calibrated formulations to target crude protein values, fish population, water temperature, and growth objectives across all three fish development stages.",
             "Generated stage-specific feeding schedules with daily intake plans and a full procurement forecast covering total feed volume and days-to-target-weight.",
             "Exposed results via a REST API consumed by a React frontend, enabling farmers to plan feed procurement accurately and reduce waste.",
+            "Also has the ability to Print and export already generated fish feed formula and a .pdf and .xlsx files respectively"
         ],
         tech: ["Java Spring Boot", "React", "REST API", "Scientific Algorithms"],
         githubUrl: "https://github.com",
-        images: ["/images/kombe.png", "/images/kombe.png"],
+        images: ["/images/fish_feed.png", "/images/f1.png", "/images/f2.png", "/images/f3.png", "/images/f4.png", "/images/f5.png", "/images/f6.png", "/images/f7.png", "/images/f8.png"],
     },
     {
         title: "WSN - Wireless Sensor Network System",
