@@ -77,7 +77,7 @@ export default function Header({}: Props) {
             >
                 {/* Download Resume Button using Next.js Link */}
                 <Link
-                    href="/files/My_Resume.pdf"
+                    href="/files/Awah%20Kenrique%20Anyere%20Ngwa.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     download="Kenrique_Resume.pdf"
